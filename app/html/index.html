@@ -37,11 +37,68 @@
                     <li class="header__menu-item">
                         <a href="">careers</a>
                     </li>
-                    <li class="header__menu-item header__menu-burger">
+                    <li class="header__menu-item header__burger">
                         <span></span>
                         <span></span>
                     </li>
                 </ul>
+            </div>
+        </div>
+        <div class="header__burger-wrap">
+            <div class="container header__burger-container">
+                <div id="header__burger-content" class="header__burger-hidden ">
+                <div class="header__hidden-img">
+                    <img src="img/icon/logo-blue.svg" alt="">
+                </div>
+                <div class="header__hidden-block" >
+                    <ul class="header__hidden-list">
+                        <li>What we do</li>
+                        <li><a href="#">Customer experience</a></li>
+                        <li><a href="#">Strategy</a></li>
+                        <li><a href="#">Technology</a></li>
+                    </ul>
+                    <ul class="header__hidden-list">
+                        <li>Case Studies</li>
+                        <li><a href="#">Shufersal</a></li>
+                        <li><a href="#">Bank Hapoalim</a></li>
+                        <li><a href="#">Yellow</a></li>
+                        <li><a href="#">Corona</a></li>
+                        <li><a href="#">Catch App</a></li>
+                    </ul>
+                </div>
+                <div class="header__hidden-block" >
+                    <ul class="header__hidden-link">
+                        <li><a href="#">Solutions</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Insights Center</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <ul class="header__social">
+                        <li class="header__social-item main__social-item">
+                            <a href="">
+                                <svg class="main__social-svg">
+                                    <use href="#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header__social-item main__social-item">
+                            <a href="">
+                                <svg class="main__social-svg">
+                                    <use href="#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header__social-item main__social-item">
+                            <a href="">
+                                <svg class="main__social-svg">
+                                    <use href="#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             </div>
         </div>
     </div>
@@ -112,7 +169,7 @@
                         <p>We deliver true value by carrying out market research, creating a strategy, and developing a roadmap that will lay the foundations for your digital transformation. </p>
                     </div>
                     <div class="section__linkto">
-                        <a href="">Learn more
+                        <a href="strategy.html">Learn more
                             <svg class="footer__social-svg">
                                 <use href="#icon-arrow"></use>
                             </svg>
@@ -130,7 +187,7 @@
                         <p>Today’s digital world dictates that in order to cover the entire customer journey, increase brand loyalty and build solid relationships with customers, organizations must place there focus on CX.</p>
                     </div>
                     <div class="section__linkto">
-                        <a href="">Learn more
+                        <a href="cx.html">Learn more
                             <svg class="footer__social-svg">
                                 <use href="#icon-arrow"></use>
                             </svg>
@@ -280,10 +337,8 @@
                 </a>
             </div>
         </div>
-        <div class="container">
-            <div class="insights__paragraph">
-                <p><span>Pushing all the boundaries</span> to keep you at the forefront, we provide end-to-end <span>solutions</span>from <span>business strategies</span> to product definition, all the way through to <span>product design</span> and <span>development</span>, always ensuring the customer experience is <span>smooth</span>, <span>innovative</span> and <span>exciting</span>.</p>
-            </div>
+        <div class="insights__paragraph container">
+            <p><span>Pushing all the boundaries</span> to keep you at the forefront, we provide end-to-end <span>solutions</span>from <span>business strategies</span> to product definition, all the way through to <span>product design</span> and <span>development</span>, always ensuring the customer experience is <span>smooth</span>, <span>innovative</span> and <span>exciting</span>.</p>
         </div>
     </section>
     <section class="offer section wrap section__black">
@@ -360,7 +415,7 @@
     </section>
     <section class="subs section wrap">
         <div class="subs__wrap container__less">
-            <div class="subs__title">
+            <div class="section__title-least section__title-center">
                 <h3>Let’s have a coffee and talk dgtl</h3>
             </div>
             <div class="section__desc subs__desc">
@@ -370,14 +425,27 @@
                 <p>We're certain you'll leave with more knowledge and feeling inspired.</p>
             </div>
             <form class="subs__form">
-                <input class="subs__input" type="text" placeholder="Name">
-                <div class="subs__input-block">
-                    <input class="subs__input subs__input-less" type="email" placeholder="Email">
-                    <input class="subs__input subs__input-less" type="text" placeholder="Phone">
+                <div class="subs__input-item">
+                    <input class="subs__input" type="text" name="name" placeholder="Name">
                 </div>
-                <input class="subs__input" type="text" placeholder="Message">
+                <div class="subs__input-block">
+                    <div class="subs__input-item">
+                        <input class="subs__input subs__input-less" name="email" type="email" placeholder="Email">
+                    </div>
+                    <div class="subs__input-item">
+                        <input class="subs__input subs__input-less" name="phone" type="text" placeholder="Phone">
+                    </div>
+                </div>
+                <div class="subs__input-item">
+                    <input class="subs__input" type="text" placeholder="Message">
+                </div>
                 <div class="subs__button">
                     <button type="submit">Submit</button>
+                </div>
+                <div class="modal" id="modal">
+                    <div class="modal__content">
+                        <h1>ura</h1>
+                    </div>
                 </div>
             </form>
         </div>
@@ -385,8 +453,8 @@
 </main>
 <footer class="footer wrap">
     <div class="container footer__wrap">
-        <div class="container__less">
-            <div class="footer__title">
+        <div class="container__less footer__container">
+            <div class="section__title-least section__title-white">
                 <h3>Subscribe to our newsletter</h3>
             </div>
             <div class="footer__block">
@@ -522,6 +590,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 <script type="text/javascript" src="js/app.min.js"></script>
 </html>
 
