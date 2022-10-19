@@ -4,8 +4,6 @@ const sliderInsights = () =>{
         arrows : true,
         slidesToShow: 3,
         slidesToScroll: 1,
-        // centerMode: true,
-        // centerPadding: '10rem',
         prevArrow: '<button class="insights-prev"></button>',
         nextArrow: '<button class="insights-next"></button>'
     });
@@ -14,9 +12,9 @@ const sliderInsights = () =>{
     }
 }
 
-const validateForm = () => {
-    $('#modal').fancybox();
-    $('.subs__form').validate({
+const validateForm = (modal,form) => {
+    modal.fancybox();
+    form.validate({
         rules: {
             name: {
                 required: true,
@@ -42,8 +40,8 @@ const validateForm = () => {
             }
         },
         submitHandler: function () {
-            $("#modal").trigger('click');
-            $('.subs__form')[0].reset();
+            modal.trigger('click');
+            form[0].reset();
         }
     });
 }
@@ -69,11 +67,11 @@ const openMenu  = () =>{
     $(".header__burger").click(function() {
         if ($("#header__burger-content").hasClass("header__burger-hidden")) {
             $("#header__burger-content").attr("class", "header__burger-visible animated header__burger-menu");
-            // $('body').css('overflow','hidden')
+            $('body').css('overflow','hidden')
             $('.header__burger-wrap').css({'background-color':'white','position':'relative'})
         } else {
             $("#header__burger-content").attr("class", "header__burger-hidden animated");
-            // $('body').css('overflow','visible')
+            $('body').css('overflow','visible')
             $('.header__burger-wrap').css({'background-color':'transparent','position':'absolute'})
         }
         $(this).toggleClass("header__burger-open");
@@ -86,9 +84,14 @@ $(document).ready(function(){
 })
 
 $( window ).on( "load", function() {
+    let formSubs = $('.subs__form'),
+        modalSubs = $('.subs__modal'),
+        formFooter = $('.footer__form'),
+        modalFooter= $('.footer__modal')
     accordion();
     openMenu();
-    validateForm()
+    validateForm(modalSubs,formSubs)
+    validateForm(modalFooter,formFooter)
 });
 
 
